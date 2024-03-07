@@ -22,5 +22,6 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
-    path('date_joined', include('myapp.urls'))
+    path('date_joined/', include('myapp.urls')),
+    path('menu/', include('myapp.urls'))
 ]

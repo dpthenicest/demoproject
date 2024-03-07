@@ -11,3 +11,5 @@ def display_date(request):
   return HttpResponse(date_joined)
 
 def menu(request):
+  content = "<h1>Menu:</h1><p>Salad</p><p>Bread</p>"
+  return HttpResponse(content)
