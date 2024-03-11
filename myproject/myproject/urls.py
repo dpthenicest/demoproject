@@ -25,5 +25,6 @@ urlpatterns = [
     path('date_joined/', include('myapp.urls')),
     path('menu/', include('myapp.urls')),
     path('path/', include('myapp.urls')),
-    path('req_info', include('myapp.urls'))
+    path('req_info', include('myapp.urls')),
+    path('dishes/<str:dish>', include('myapp.urls'))
 ]
