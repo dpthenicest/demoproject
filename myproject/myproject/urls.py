@@ -23,5 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
     path('date_joined/', include('myapp.urls')),
-    path('menu/', include('myapp.urls'))
+    path('menu/', include('myapp.urls')),
+    path('path/', include('myapp.urls')),
+    path('req_info', include('myapp.urls'))
 ]
