@@ -18,13 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 
 from myapp import views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
-    path('date_joined/', include('myapp.urls')),
-    path('menu/', include('myapp.urls')),
-    path('path/', include('myapp.urls')),
-    path('req_info', include('myapp.urls')),
-    path('dishes/<str:dish>', include('myapp.urls'))
+    # path('date_joined/', include('myapp.urls')),
+    # path('menu/', include('myapp.urls')),
+    # path('path/', include('myapp.urls')),
+    # path('req_info', include('myapp.urls')),
+    # path('dishes/<str:dish>', include('myapp.urls'))
 ]
+
+handler404 = 'myproject.views.handler404'
