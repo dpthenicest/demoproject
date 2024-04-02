@@ -17,3 +17,8 @@ class Menu(models.Model):
 
     def __str__(self):
         return f"{self.name}: {self.cuisine}"
+
+class Logger(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    time_log = models.TimeField(help_text="Enter an exact time!")

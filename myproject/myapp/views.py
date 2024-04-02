@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 
-from .forms import InputForm
+from .forms import InputForm, LogForm
 
 # Create your views here.
 def home(request):
@@ -60,3 +60,12 @@ def form_view(request):
   form = InputForm()
   context = {"form": form}
   return render(request, "home.html", context)
+
+def log_view(request):
+  form = LogForm()
+  if request.method == 'POST':
+    form = LogForm(request.POST)
+    if form.is_valid():
+      form.save()
+  context = {"form": form}
+  return render(request, "log.html", context)
