@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 
+from .forms import InputForm
+
 # Create your views here.
 def home(request):
   return HttpResponse('Hello, World!')
@@ -53,3 +55,8 @@ def menuitems(request, dish):
   description = items[dish]
 
   return HttpResponse(f"<h2>{dish} </h2> <p>{description}")
+
+def form_view(request):
+  form = InputForm()
+  context = {"form": form}
+  return render(request, "home.html", context)

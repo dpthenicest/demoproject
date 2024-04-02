@@ -7,5 +7,6 @@ urlpatterns = [
   path('menu/', views.menu, name='menu'),
   path('path/', views.path, name='path'),
   path('req_info/', views.request_info, name='request_info'),
-  path('dishes/<str:dish>/', views.menuitems, name='dishes_dish')
+  path('dishes/<str:dish>/', views.menuitems, name='dishes_dish'),
+  path('shifts/', views.form_view)
 ]
