@@ -22,3 +22,6 @@ class Logger(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     time_log = models.TimeField(help_text="Enter an exact time!")
+
+    def __str__(self):
+        return f"{self.first_name}, {self.last_name}: {self.time_log}"
